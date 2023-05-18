@@ -1,0 +1,903 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+
+.navbar-items a,
+.menu-item {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.5rem;
+}
+
+.menu-item {
+    font-size: 2rem;
+}
+
+.hero-container {
+  background-image: url(./images/maneskin-kids.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.band-name {
+  color: #f1162e;
+  font-family: "Rock Salt", cursive;
+  font-size: 4rem;
+}
+
+.band-phrase {
+  color: white;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2rem;
+}
+
+/* Content Section */
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-img {
+  grid-column: 1/4;
+  padding: 2rem;
+}
+
+.text-uppercase {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.5rem;
+  display: inline-block;
+  background-color: rgba(241, 22, 46, 1);
+  transform: skewX(-20deg);
+  color: white;
+}
+
+.content-text {
+  grid-column: 4/6;
+  padding: 2rem;
+  margin-right: 2rem;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2rem;
+}
+
+/* Albums Section */
+
+.albums-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.albums-title {
+  font-family: "Rock Salt", cursive;
+  font-size: 4rem;
+  padding: 1%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  color: white;
+  text-shadow: 4px 4px 2px #f1162e;
+}
+
+.albums-cards {
+  position: relative;
+  display: flex;
+  width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.albums-cards .card {
+  position: relative;
+  max-width: 300px;
+  height: 240px;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 30px 10px;
+  padding: 20px 15px;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+.albums-cards .card:hover {
+  height: 420px;
+  background-color: #fff;
+}
+
+.albums-cards .card .card-image {
+  position: relative;
+  width: 260px;
+  height: 260px;
+
+  top: -40%;
+  left: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.albums-cards .card .card-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.albums-cards .card .card-content {
+  position: relative;
+  top: -140px;
+  padding: 10px 15px;
+  color: #111;
+  text-align: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.albums-cards .card .card-content h3 {
+  font-family: "Rock Salt", cursive;
+  font-size: 1.2rem;
+}
+
+.albums-cards .card .card-content p {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 1.2rem;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.albums-cards .card:hover .card-content {
+  margin-top: 30px;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+/* Comment Section */
+
+.comment-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 6fr 1fr; */
+  height: 100%;
+  align-items: stretch;
+  /* padding: 20px; */
+  border-radius: 5px;
+  /* margin-top: 1%; */
+  margin-bottom: 4%;
+}
+
+.comment-container > :nth-child(2) {
+  background-color: black;
+}
+
+.send-comment {
+  grid-column: 1/2;
+  /* grid-row: 2/3; */
+  display: grid;
+  grid-template-rows: 2fr 5fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.comment-title {
+  grid-row: 1/2;
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  margin-bottom: 2%;
+  background-color: black;
+  transform: skewX(-20deg);
+  color: white;
+  padding: 1%;
+}
+
+.message-input-container {
+  position: relative;
+  margin-bottom: 2%;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 80%;
+  width: 80%;
+}
+
+#message-input {
+  height: 100%;
+  width: 100%;
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2rem;
+  padding-top: 8%;
+  border: 2px solid black;
+}
+
+#message-label {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2rem;
+}
+
+.received-comment {
+  grid-column: 2/3;
+  /* grid-row: 2/3; */
+  display: grid;
+  grid-template-rows: 2fr 5fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.message-display-title {
+  grid-row: 1/2;
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  margin-top: 2%;
+  background-color: rgba(241, 22, 46, 1);
+  transform: skewX(-20deg);
+  color: white;
+  padding: 1%;
+}
+
+#message-display-container {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: 80%;
+  width: 80%;
+  border: 2px solid white;
+  margin-bottom: 2%;
+  border-radius: 2%;
+  
+}
+
+.displayed-message {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 1.5rem;
+  color: white;
+  padding-left: 3%;
+  padding-top: 3%;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* Donation Section */
+
+.donation-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.donation-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.don-title {
+  font-family: "Rock Salt", cursive;
+  font-size: 2rem;
+  /* background-color: rgba(241, 22, 46, 1); */
+  transform: skewX(-20deg);
+  color: black;
+  padding: 1%;
+  margin-bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.don-text {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 2.5rem;
+  padding: 2%;
+  text-align: center;
+  background-color: #111;
+  color: white;
+}
+
+.donation-buttons {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.donation-options {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 2%;
+  margin-bottom: 20%;
+}
+
+/* Glitch Button */
+
+.button-glitch,
+.button-glitch::after {
+  /* border: 2px solid #f1162e; */
+  font-family: "Reenie Beanie", cursive;
+  font-size: 3rem;
+
+  
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  background: linear-gradient(45deg, transparent 5%, #f1162e 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-glitch:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "ALTERNATE TEXT";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #00e6f6 5%,
+    #f1162e 5%
+  );
+  text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.button-glitch:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-glitch,
+  .button-glitch:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+/* Circle Drawing Button */
+
+.button {
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5rem 3rem;
+  margin: 0;
+  font-family: "Reenie Beanie", cursive;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+}
+
+.button::before,
+.button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.button--janus {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 900;
+  width: 175px;
+  height: 120px;
+  color: #fff;
+  background: none;
+  font-size: 2.5rem;
+}
+
+.button--janus::before {
+  content: "";
+  background: #e6e6e6;
+  -webkit-clip-path: path(
+    "M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z"
+  );
+  clip-path: path(
+    "M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z"
+  );
+  transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55),
+    -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55),
+    background 0.5s ease;
+}
+
+.button--janus:hover::before {
+  background: #000;
+  -webkit-clip-path: path(
+    "M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z"
+  );
+  clip-path: path(
+    "M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z"
+  );
+}
+
+.button--janus::after {
+  content: "";
+  height: 86%;
+  width: 97%;
+  top: 5%;
+  border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+  border: 1px solid #000;
+  transform: rotate(-20deg);
+  z-index: -1;
+  transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+
+.button--janus:hover::after {
+  transform: translate3d(0, -5px, 0);
+}
+
+.button--janus span {
+  display: block;
+  transition: transform 0.3s ease;
+  mix-blend-mode: difference;
+  color: white;
+}
+
+.button--janus:hover span {
+  transform: translate3d(0, -10px, 0);
+  color: white;
+}
+
+/* Custom Donation Button */
+
+#custom-don-btn {
+  color: white;
+  background-color: black;
+
+  border-radius: 100%;
+  width: 100%;
+
+  text-align: center;
+}
+
+#custom-don-btn:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+#custom-don-btn,
+#custom-don-label {
+  position: relative;
+  z-index: 1;
+  margin: 10%;
+}
+
+#custom-don-label {
+  margin-right: 10px;
+  color: #f1162e;
+  line-height: 1;
+}
+
+.custom-don {
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5rem 3rem;
+  margin: 0;
+  font-family: "Reenie Beanie", cursive;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*   width: 100%;
+    height: 100%; */
+}
+
+.custom-don::before,
+.custom-don::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-don--janus {
+  font-family: "Reenie Beanie", cursive;
+  font-weight: 900;
+  width: 175px;
+  height: 120px;
+  color: #fff;
+  background: none;
+  font-size: 2.5rem;
+}
+
+.custom-don--janus::before {
+  content: "";
+  background: #e6e6e6;
+
+  /* Original Path Of The Shape */
+
+  clip-path: path(
+    "M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z"
+  );
+
+  /* Path Of The New Shape That Is 1.25 Times The Size Of The Original Shape */
+
+  /*  clip-path: path("M193.125,110.625 C163.75,141.875 78.125,137.5 37.5,111.875 C-3.125,86.25 -4.375,52.5 5.625,31.875 C15.625,11.25 41.875,-7.5 106.25,4.375 C170.625,16.875 222.5,79.375 193.125,110.625 Z"); */
+
+  transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55),
+    -webkit-clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55),
+    background 0.5s ease;
+}
+
+
+.custom-don--janus:hover::before {
+  background: #000;
+
+  clip-path: path(
+    "M143,77 C117,96 74,100.5 45.5,91.5 C17,82.5 -10.5,57 5.5,31.5 C21.5,6 79,-5.5 130.5,4 C182,13.5 169,58 143,77 Z"
+  );
+
+  /* clip-path: path("M214.5,115.5 C175.5,144 111,150.75 68.25,136.75 C25.5,122.75 -15.75,85.5 8.25,47.25 C32.25,9 118.5,-8.25 195.75,6.75 C273,21.75 253.5,87 214.5,115.5 Z"); */
+}
+
+.custom-don--janus::after {
+  content: "";
+  height: 86%;
+  width: 70%;
+  top: 15%;
+  border-radius: 58% 42% 55% 45% / 56% 45% 55% 44%;
+  border: 1px solid #000;
+  transform: rotate(-20deg);
+  z-index: -1;
+  transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
+}
+
+.custom-don--janus:hover::after {
+  transform: translate3d(0, -5px, 0);
+}
+
+.button--janus.clicked-don::before,
+.custom-don--janus.clicked-don::before {
+  background-color: #f1162e;
+}
+
+.custom-don--janus.clicked-don > #custom-don-label {
+  color: black;
+}
+
+.custom-don--janus.clicked-don > #custom-don-btn {
+  background-color: white;
+  color: black;
+  
+}
+
+.button--janus.clicked-don > span {
+  mix-blend-mode: normal;
+}
+
+  #don-confirm-btn {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #f1162e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: rotate(-10deg);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 3rem;
+  }
+  
+   #don-confirm-btn:hover {
+    transform: rotate(0deg);
+    background-color: black;
+    color: white;
+  }
+  
+  .clicked {
+    border: none;
+    background-image: url(./images/check-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+  } 
+  
+  #don-message {
+    margin-top: 2%;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2rem;
+  }
+
+  #don-amount-red {
+    color: #f1162e;
+    font-size: 2.5rem;
+  }
+
+  #you-rock {
+    font-family: 'Rock Salt', cursive;
+    font-weight: bolder;
+    background-color: #f1162e;
+    font-size: 2rem;
+  }
+
+  .hide {
+    display: none;
+  }
+
+
+
+  /* Footer */
+
+  footer {
+    height: 35%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 5%;
+    background-color: black;
+  }
+
+  .left-container, 
+  .middle-container, 
+  .right-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .left-container {
+    background-image: url(./images/maneskin-logo-white.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    margin-left: 10%;
+  }
+
+  .middle-container {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .middle-container-items {
+    color: white;
+    text-decoration-line: none;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2rem;
+    transition: transform 0.3s;
+  }
+
+  .middle-container-items:hover {
+    background-color: rgba(241, 22, 46, 1);
+    transform: rotate(20deg);
+  }
+
+
+  .right-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 4px 4px 2px #f1162e;
+  }
+
+  #social-media-title {
+    font-family: 'Rock Salt', cursive;
+    font-size: 2rem;
+    margin-top: 5%;
+    padding: 5%;
+  }
+
+  .social-media-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  #instagram,
+  #youtube,
+  #facebook {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+    background-position: 50% 50%;
+  }
+
+  #instagram:hover,
+  #youtube:hover,
+  #facebook:hover {
+    transform: scale(2);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  #instagram {
+    background-image: url(./images/instagram-white.png);
+  }
+
+
+  #youtube {
+    background-image: url(./images/youtube-white.png);
+  }
+
+  #facebook {
+    background-image: url(./images/facebook-white.png);
+  }
+
+
+  @media (max-width: 1024px) {
+    .hero-nav {
+        width: 100%;
+        height: 400px;
+    }
+    .content-container {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+    .content-img {
+        display: none;
+    }
+    .content-text {
+       background-image: url(./images/maneskin-band.jpeg);
+       background-repeat: no-repeat;
+       background-size:cover;
+       margin: 0;
+       color: white;
+       padding: 0;
+    }
+    .albums-container {
+        width: 100%;
+        
+    }
+    .albums-cards {
+        flex-direction: column;
+        width: 100%;
+    }
+    .albums-cards .card {
+        height: 140px;
+        width: 160px;
+    }
+    .albums-cards .card .card-image {
+        width: 130px;
+        height: 130px;
+        left: 0;
+    }
+    .comment-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 1200px;
+        width: 100%;
+    }
+    .send-comment {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin-bottom: 10%;
+    }
+    .received-comment {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .donation-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr; 
+        height: 1600px;
+        width: 100%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: 480px;
+        width: 100%;
+    }
+    .right-container {
+        margin-bottom: 10%;
+    }
+    .left-container {
+        margin: 0;
+        padding: 5%;
+        background-size: 50%;
+    }
+  }
